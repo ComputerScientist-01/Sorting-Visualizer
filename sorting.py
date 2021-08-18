@@ -21,12 +21,15 @@ print(arr)
 
 
 fig, ax = plt.subplots(figsize=(16, 8))
+fig.suptitle("Unsorted Array")
+ax.set(xlabel="Index", ylabel="Value")
+ax.set_xlim([0, N])
 container = ax.bar(np.arange(0, len(arr), 1),
                    align="edge", width=0.8, height=arr)
 
 
 # insertion sort
-
+# sorter = "Insertion"
 # for i in range(1, len(arr)):
 #     key = arr[i]
 #     j = i-1
@@ -39,6 +42,8 @@ container = ax.bar(np.arange(0, len(arr), 1),
 # print(arr)
 
 # quick sort
+sorter = "Quick"
+
 
 def quicksort(arr, lo, hi):
     if(lo < hi):
@@ -64,7 +69,12 @@ def partition(arr, lo, hi):
 
 quicksort(arr, 0, len(arr)-1)
 print(arr)
+
+
 fig, ax = plt.subplots(figsize=(16, 8))
+fig.suptitle(f"{sorter} Sort")
+ax.set(xlabel="Index", ylabel="Value")
+ax.set_xlim([0, N])
 container = ax.bar(np.arange(0, len(arr), 1),
                    align="edge", width=0.8, height=arr)
 plt.show()
