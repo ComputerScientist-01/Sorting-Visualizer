@@ -10,6 +10,10 @@ N = 30
 # creating an array and rounding it off
 arr = np.round(np.linspace(1, 1000, N), 0)
 
+# if a pseudorandom number generator is reinitialized with the same seed,
+# it will produce the same sequence of numbers.
+np.random.seed(0)
+
 # shuffling the array
 np.random.shuffle(arr)
 print(arr)
