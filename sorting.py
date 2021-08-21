@@ -69,7 +69,7 @@ np.random.seed(0)
 # shuffling the array
 np.random.shuffle(arr)
 print(arr)
-
+arr = TrackedArray(arr)
 
 # insertion sort
 # sorter = "Insertion"
