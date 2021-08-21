@@ -5,6 +5,8 @@ import scipy
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+plt.style.use('dark_background')
+
 
 class TrackedArray():
     def __init__(self, arr):
