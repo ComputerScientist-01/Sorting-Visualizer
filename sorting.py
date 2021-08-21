@@ -19,6 +19,12 @@ class TrackedArray():
         self.access_type = []
         self.full_copies = []
 
+    def track(self, key, access_type):
+        self.indices.append(key)
+        self.values.append(self.arr[key])
+        self.access_type.append(access_type)
+        self.full_copies.append(np.copy(self.arr))
+
     def __getitem__(self, key):
         self.track(key, "get")
         return self.arr.__getitem__(key)
