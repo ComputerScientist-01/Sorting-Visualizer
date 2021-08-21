@@ -25,6 +25,16 @@ class TrackedArray():
         self.access_type.append(access_type)
         self.full_copies.append(np.copy(self.arr))
 
+    # to keep track of the activities
+    # like which index was acessed or
+    # what operation was performed
+    # return type is either a list of tuples or a tuple
+    def GetActivity(self, idx=None):
+        if isinstance(idx, type(None)):
+            return [(i, op) for (i, op) in zip(self.indices, self.access_type)]
+        else:
+            return (self.indices[idx], self.access_type[idx])
+
     def __getitem__(self, key):
         self.track(key, "get")
         return self.arr.__getitem__(key)
