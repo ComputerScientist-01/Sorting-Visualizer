@@ -71,14 +71,6 @@ np.random.shuffle(arr)
 print(arr)
 
 
-fig, ax = plt.subplots(figsize=(16, 8))
-fig.suptitle("Unsorted Array")
-ax.set(xlabel="Index", ylabel="Value")
-ax.set_xlim([0, N])
-container = ax.bar(np.arange(0, len(arr), 1),
-                   align="edge", width=0.8, height=arr)
-
-
 # insertion sort
 # sorter = "Insertion"
 # for i in range(1, len(arr)):
