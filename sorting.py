@@ -134,7 +134,7 @@ def update(frame):
 
 
 ani = animation.FuncAnimation(fig, update, frames=range(len(arr.full_copies)),
-                              blit=False, interval=100./FPS, repeat=False)
+                              blit=True, interval=1000./FPS, repeat=False)
 
 container = ax.bar(np.arange(0, len(arr), 1),
                    align="edge", width=0.8, height=arr)
