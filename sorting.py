@@ -1,3 +1,4 @@
+from matplotlib import container
 import numpy as np
 from numpy.core.fromnumeric import partition
 from numpy.random import default_rng
@@ -5,7 +6,7 @@ import scipy
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-plt.style.use('dark_background')
+# plt.style.use('dark_background')
 
 
 class TrackedArray():
@@ -57,14 +58,15 @@ class TrackedArray():
         return self.arr.__repr__()
 
 
-N = 30
+FPS = 60.0
+
+N = 50
 
 # creating an array and rounding it off
 arr = np.round(np.linspace(1, 1000, N), 0)
-
 # if a pseudorandom number generator is reinitialized with the same seed,
 # it will produce the same sequence of numbers.
-np.random.seed(0)
+# np.random.seed(0)
 
 # shuffling the array
 np.random.shuffle(arr)
@@ -72,52 +74,68 @@ print(arr)
 arr = TrackedArray(arr)
 
 # insertion sort
-# sorter = "Insertion"
-# for i in range(1, len(arr)):
-#     key = arr[i]
-#     j = i-1
-#     while ((j >= 0) and (arr[j] > key)):
-#         arr[j+1] = arr[j]
-#         j -= 1
-#     arr[j+1] = key
+sorter = "Insertion"
+for i in range(1, len(arr)):
+    key = arr[i]
+    j = i-1
+    while ((j >= 0) and (arr[j] > key)):
+        arr[j+1] = arr[j]
+        j -= 1
+    arr[j+1] = key
 
-# print("\n after sorting: \n")
-# print(arr)
+print("\n after sorting: \n")
+print(arr)
 
 # quick sort
-sorter = "Quick"
+# sorter = "Quick"
 
 
-def quicksort(arr, lo, hi):
-    if(lo < hi):
-        p = partition(arr, lo, hi)
-        quicksort(arr, lo, p-1)
-        quicksort(arr, p+1, hi)
+# def quicksort(arr, lo, hi):
+#     if(lo < hi):
+#         p = partition(arr, lo, hi)
+#         quicksort(arr, lo, p-1)
+#         quicksort(arr, p+1, hi)
 
 
-def partition(arr, lo, hi):
-    pivot = arr[hi]
-    i = lo
-    for j in range(lo, hi):
-        if arr[j] < pivot:
-            temp = arr[i]
-            arr[i] = arr[j]
-            arr[j] = temp
-            i += 1
-    temp = arr[i]
-    arr[i] = arr[hi]
-    arr[hi] = temp
-    return i
+# def partition(arr, lo, hi):
+#     pivot = arr[hi]
+#     i = lo
+#     for j in range(lo, hi):
+#         if arr[j] < pivot:
+#             temp = arr[i]
+#             arr[i] = arr[j]
+#             arr[j] = temp
+#             i += 1
+#     temp = arr[i]
+#     arr[i] = arr[hi]
+#     arr[hi] = temp
+#     return i
 
 
-quicksort(arr, 0, len(arr)-1)
+# quicksort(arr, 0, len(arr)-1)
+
 print(arr)
 
 
 fig, ax = plt.subplots(figsize=(16, 8))
+
 fig.suptitle(f"{sorter} Sort")
+container = ax.bar(np.arange(0, len(arr), 1), arr, align='edge', width=0.8)
 ax.set(xlabel="Index", ylabel="Value")
 ax.set_xlim([0, N])
+
+
+def update(frame):
+    for (rectangle, height) in zip(container.patches, arr.full_copies[frame]):
+        rectangle.set_height(height)
+        rectangle.set_color('#1f77b4')
+
+    return (*container,)
+
+
+ani = animation.FuncAnimation(fig, update, frames=range(len(arr.full_copies)),
+                              blit=False, interval=100./FPS, repeat=False)
+
 container = ax.bar(np.arange(0, len(arr), 1),
                    align="edge", width=0.8, height=arr)
 plt.show()
