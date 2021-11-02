@@ -2,7 +2,6 @@ from matplotlib import container
 import numpy as np
 from numpy.core.fromnumeric import partition
 from numpy.random import default_rng
-import scipy
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from bubbleSort import bubbleSort
