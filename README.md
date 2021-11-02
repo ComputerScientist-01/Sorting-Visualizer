@@ -35,22 +35,14 @@
 
 ## Instructions to run
 
-- Pre-requisites:
+1. Git clone this repository
 
-  - < insert pre-requisite >
-  - < insert pre-requisite >
+2. ```pip install -r requirements.txt ```  to install all the dependencies  
+ 
+3. ```python sorting.py```
 
-- < directions to install >
+4. _now your app is up and running_
 
-```bash
-< insert code >
-```
-
-- < directions to execute >
-
-```bash
-< insert code >
-```
 
 <!-- LICENSE -->  
 
