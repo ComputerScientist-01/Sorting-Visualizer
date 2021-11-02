@@ -5,8 +5,8 @@
     
 </p>
 
-<h2 align="center"> Insert Project Title Here </h2>
-<h4 align="center"> Insert Project Description Here <h4>
+<h2 align="center"> Sorting Visualizer </h2>
+<h4 align="center"> Made using Python and Matplotlib Animations Library <h4>
 
 ## :fire: Features
 
