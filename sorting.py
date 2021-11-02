@@ -73,49 +73,6 @@ np.random.shuffle(arr)
 print(arr)
 arr = TrackedArray(arr)
 
-# insertion sort
-sorter = "Insertion"
-for i in range(1, len(arr)):
-    key = arr[i]
-    j = i-1
-    while ((j >= 0) and (arr[j] > key)):
-        arr[j+1] = arr[j]
-        j -= 1
-    arr[j+1] = key
-
-print("\n after sorting: \n")
-print(arr)
-
-# quick sort
-# sorter = "Quick"
-
-
-# def quicksort(arr, lo, hi):
-#     if(lo < hi):
-#         p = partition(arr, lo, hi)
-#         quicksort(arr, lo, p-1)
-#         quicksort(arr, p+1, hi)
-
-
-# def partition(arr, lo, hi):
-#     pivot = arr[hi]
-#     i = lo
-#     for j in range(lo, hi):
-#         if arr[j] < pivot:
-#             temp = arr[i]
-#             arr[i] = arr[j]
-#             arr[j] = temp
-#             i += 1
-#     temp = arr[i]
-#     arr[i] = arr[hi]
-#     arr[hi] = temp
-#     return i
-
-
-# quicksort(arr, 0, len(arr)-1)
-
-print(arr)
-
 
 fig, ax = plt.subplots(figsize=(16, 8))
 
