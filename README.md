@@ -25,13 +25,10 @@
 
 ## :iphone: Screenshots
 
-|                                   |                                   |
+| Bubble Sort                             |    Quick Sort                               |
 | --------------------------------- | --------------------------------- |
-| <img src="images/"  width="300"/> | <img src="images/"  width="300"/> |
-| <img src="images/" width="300"/>  | <img src="images/" width="300"/>  |
-| <img src="images/" width="300"/>  | <img src="images/" width="300"/>  |
-| <img src="images/" width="300"/>  | <img src="images/" width="300"/>  |
-| <img src="images/" width="300"/>  | <img src="images/" width="300"/>  |
+| <img src="https://user-images.githubusercontent.com/39644109/139861633-bbd78904-3ad5-457a-9739-edba2120242b.gif"  width="300"/> | <img src="images/"  width="300"/> |
+
 
 ## Instructions to run
 
