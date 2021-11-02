@@ -5,8 +5,8 @@
     
 </p>
 
-<h2 align="center"> Insert Project Title Here </h2>
-<h4 align="center"> Insert Project Description Here <h4>
+<h2 align="center"> Sorting Visualizer </h2>
+<h4 align="center"> Made using Python and Matplotlib Animations Library <h4>
 
 ## :fire: Features
 
@@ -16,9 +16,12 @@
 
 ## :bulb: Built Using
 
-- [**a**]()
-- [**b**]()
-- [**c**]()
+- [**Python**](https://www.python.org/)
+- [**Numpy**](https://numpy.org/) - For Generating and working with arrays 
+- [**Matplotlib.pyplot**](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html) - For interactive plots
+- [**Matplotlib.animation**](https://matplotlib.org/stable/api/animation_api.html) -  Easiest way to make a live animation in matplotlib 
+
+
 
 ## :iphone: Screenshots
 
