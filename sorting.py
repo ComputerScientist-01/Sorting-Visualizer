@@ -5,6 +5,9 @@ from numpy.random import default_rng
 import scipy
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+from bubbleSort import bubbleSort
+from quickSort import quickSort
+
 
 # plt.style.use('dark_background')
 
@@ -73,10 +76,17 @@ np.random.shuffle(arr)
 print(arr)
 arr = TrackedArray(arr)
 
+# function call for bubble sort
+bubbleSort(arr)
+
+# function call for quick sort
+#quickSort(arr, 0, len(arr)-1)
+
+print(arr)
 
 fig, ax = plt.subplots(figsize=(16, 8))
 
-fig.suptitle(f"{sorter} Sort")
+fig.suptitle(f"Sorting Algorithms")
 container = ax.bar(np.arange(0, len(arr), 1), arr, align='edge', width=0.8)
 ax.set(xlabel="Index", ylabel="Value")
 ax.set_xlim([0, N])
