@@ -10,7 +10,7 @@ from quickSort import quickSort
 
 
 # plt.style.use('dark_background')
-
+# dark background breaks the whole program use safely
 
 class TrackedArray():
     def __init__(self, arr):
