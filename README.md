@@ -8,14 +8,11 @@
 <h2 align="center"> Insert Project Title Here </h2>
 <h4 align="center"> Insert Project Description Here <h4>
 
-## Demo - [Link](link)
-
 ## :fire: Features
 
-- point 1
-- point 2
-- point 3
-- point 4
+- Bubble Sort
+- Quick Sort
+- More Algorithms ( work in progress 🚧)
 
 ## :bulb: Built Using
 
