@@ -87,7 +87,7 @@ print(arr)
 
 fig, ax = plt.subplots(figsize=(16, 8))
 
-fig.suptitle(f"Sorting Algorithms")
+fig.suptitle('Sorting Algorithms')
 container = ax.bar(np.arange(0, len(arr), 1), arr, align='edge', width=0.8)
 ax.set(xlabel="Index", ylabel="Value")
 ax.set_xlim([0, N])
