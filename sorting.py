@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from bubbleSort import bubbleSort
 from quickSort import quickSort
+from insertionSort import insertionSort
+from selectionSort import selectionSort
 
 
 # plt.style.use('dark_background')
@@ -76,8 +78,8 @@ print(arr)
 arr = TrackedArray(arr)
 
 # function call for bubble sort
-bubbleSort(arr)
-
+# bubbleSort(arr)
+insertionSort(arr)
 # function call for quick sort
 #quickSort(arr, 0, len(arr)-1)
 
