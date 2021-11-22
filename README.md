@@ -12,6 +12,8 @@
 
 - Bubble Sort
 - Quick Sort
+- Insertion Sort
+- Selection Sort
 - More Algorithms ( work in progress 🚧)
 
 ## :bulb: Built Using
