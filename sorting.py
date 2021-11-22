@@ -77,12 +77,6 @@ np.random.shuffle(arr)
 print(arr)
 arr = TrackedArray(arr)
 
-# function call for bubble sort
-# bubbleSort(arr)
-insertionSort(arr)
-# function call for quick sort
-#quickSort(arr, 0, len(arr)-1)
-
 print(arr)
 
 fig, ax = plt.subplots(figsize=(16, 8))
@@ -92,6 +86,12 @@ container = ax.bar(np.arange(0, len(arr), 1), arr, align='edge', width=0.8)
 ax.set(xlabel="Index", ylabel="Value")
 ax.set_xlim([0, N])
 
+# function calls for the sorting algorithms
+# uncomment as required
+
+# bubbleSort(arr)
+# insertionSort(arr)
+# quickSort(arr, 0, len(arr)-1)
 
 def update(frame):
     for (rectangle, height) in zip(container.patches, arr.full_copies[frame]):
